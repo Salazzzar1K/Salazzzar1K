@@ -1,0 +1,30 @@
+class Zoo:
+total_animals = 0 
+
+def __init__(self, name, species, can_fly=False, can_swim=False, can_walk=True):
+self.name = name
+self.species = species
+self.can_fly = can_fly
+self.can_swim = can_swim
+self.can_walk = can_walk
+Zoo.total_animals += 1
+
+def move(self):
+if self.can_fly:
+print(f"{self.name} полетів...")
+elif self.can_swim:
+print(f"{self.name} поплив...")
+elif self.can_walk:
+print(f"{self.name} пішов...")
+
+tiger = Zoo("Тигр", "ссавець", can_walk=True)
+parrot = Zoo("Папуга", "птах", can_fly=True)
+dolphin = Zoo("Дельфін", "ссавець", can_swim=True)
+penguin = Zoo("Пінгвін", "птах", can_swim=True, can_walk=True)
+
+tiger.move() # Пішов...
+parrot.move() # Полетів...
+dolphin.move() # Поплив...
+penguin.move() # Пішов...
+
+print(f"Загальна кількість тварин у зоопарку: {Zoo.total_animals}")
