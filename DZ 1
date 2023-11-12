@@ -1,0 +1,28 @@
+Dz 1
+def is_even(number):
+
+if number % 2 == 0:
+
+return True
+
+else:
+
+return False
+
+DZ 2
+
+def count_vowels(input_string):
+
+vowels = 'aeiou'
+
+input_string = input_string.lower()
+
+count = 0
+
+for char in input_string:
+
+if char in vowels:
+
+count += 1
+
+return count
